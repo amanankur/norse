@@ -238,7 +238,7 @@ func (r *RedisStruct) HMSet(redisInstance string, key string, keyVapPair map[str
 func (r *RedisStruct) HGetAll(redisInstance string, key string) (map[string]string, error) {
 	values, err := redis.StringMap(r.Execute(redisInstance, "HGETALL", key))
 	if err != nil {
-		return map[string]string, err
+		return map[string]string{}, err
 	}
 	return values, nil
 }
