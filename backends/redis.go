@@ -12,7 +12,7 @@ import (
 
 	"github.com/garyburd/redigo/redis"
 	//pool "github.com/goibibo/minimal_vitess_pool/pools"
-	"github.com/goibibo/norse/config"
+	"github.com/amanankur/norse/config"
 )
 
 var (
