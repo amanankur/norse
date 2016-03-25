@@ -3,8 +3,8 @@ package backends
 import (
 	"testing"
 
+	"github.com/amanankur/norse/config"
 	"github.com/garyburd/redigo/redis"
-	"github.com/goibibo/norse/config"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -57,7 +57,7 @@ func Test_MGetSet(t *testing.T) {
 func Test_HMGetSet(t *testing.T) {
 	redisClient, _ := GetRedisClient(incrFun, decrFun)
 	val := map[string]string{"key1": "value1", "key2": "value2", "key3": "value3"}
-        _, err := redisClient.HMSet("redisConfig", "key", val)
+	_, err := redisClient.HMSet("redisConfig", "key", val)
 	assert.NoError(t, err, "redis HMSet error")
 
 	value, errg := redisClient.HMGet("redisConfig", "key", "key1")

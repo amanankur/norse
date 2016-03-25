@@ -1,7 +1,7 @@
 package backends
 
 import (
-	"github.com/goibibo/norse/config"
+	"github.com/amanankur/norse/config"
 	"sync"
 )
 
