@@ -57,12 +57,12 @@ func redisFactory(key string, config map[string]string) (redis.Conn, error) {
 		return nil, err
 	}
 	// select default db if not specified
-	db, ok := config["db"]
-	if ok {
-		cli.Do("SELECT", db)
-	} else {
-		cli.Do("SELECT", 0)
-	}
+	// db, ok := config["db"]
+	// if ok {
+	// 	cli.Do("SELECT", db)
+	// } else {
+	// 	cli.Do("SELECT", 0)
+	// }
 	return cli, nil
 }
 
